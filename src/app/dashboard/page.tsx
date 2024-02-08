@@ -53,9 +53,9 @@ export default function Page({ params }: Props) {
 						<h5 className="text-sm font-normal text-black text-base/6">Lithium Battery</h5>
 						<h5 className="text-sm font-normal text-black text-base/6">MMA,NGA</h5>
 						<h5 className="text-sm font-normal text-black text-base/6">Amsterdam</h5>
-						<div className="text-sm font-normal text-black flex gap-1 w-fit items-center">
+						<div className="text-sm font-normal text-black flex gap-1 w-fit items-center flex-wrap">
 							<div className="rounded-xl bg-tahiti text-metal w-fit px-2 py-2  font-500 text-xs/3 h-fit">IMPORT</div>
-							<div className="rounded-3xl bg-tahiti text-metal w-fit px-2 py-2  font-500 text-xs/3 h-fit">SEA FREIGHT FCL</div>
+							<div className="rounded-3xl bg-tahiti text-metal w-fit px-2 py-2  font-500 text-xs/3 h-fit ">SEA FREIGHT FCL</div>
 						</div>
 						<div className="text-sm font-xs/3 font-500 py-1 px-2 text-custom-green rounded-3xl bg-custom-green-bg">COMPLETED</div>
 					</div>

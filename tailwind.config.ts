@@ -27,7 +27,10 @@ const config: Config = {
         'bubble-gum': '#ff77e9',
         'bermuda': '#78dcca',
         'custom-green':"#03C161",
-        'custom-green-bg': "#03C1611A"
+        'custom-green-bg': "#03C1611A",
+        'custom-text-color-black' : '#414833',
+        'custom-text-color-black-bg' : '#4148331A',
+        'custom-red' : '#DC2626'
       }
     },
   },
