@@ -30,7 +30,12 @@ const config: Config = {
         'custom-green-bg': "#03C1611A",
         'custom-text-color-black' : '#414833',
         'custom-text-color-black-bg' : '#4148331A',
-        'custom-red' : '#DC2626'
+        'custom-red' : '#DC2626',
+        'custom-brown' : '#85340A',
+        'custom-purple' : '#8338EC',
+        'custom-purple-bg' : '#8338ec1A',
+        'custom-brown-bg' : '#85340A1A'
+
       }
     },
   },
