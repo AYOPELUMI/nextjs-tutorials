@@ -23,6 +23,7 @@ const config: Config = {
         'midnight': '#121063',
         'metal': '#1C2499',
         'tahiti': '#CED8E6',
+        'custom-white-bg' :'#F4F6FA1A',
         'custom-text-color': '#1E1E1E',
         'bubble-gum': '#ff77e9',
         'bermuda': '#78dcca',
