@@ -4,7 +4,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { useState } from "react";
 import { IoMdAdd } from "react-icons/io";
-import { FiEdit2 } from "react-icons/fi";
+import { FiEdit2, FiEye } from "react-icons/fi";
 import { FaClipboardList, FaRegCheckCircle} from "react-icons/fa";
 import { HiArchive } from "react-icons/hi";
 import { TiLocationOutline } from "react-icons/ti";
@@ -47,7 +47,7 @@ export default function Page({
                     Action
                 <BsThreeDotsVertical />
                 { actionOptions ?
-                    <ul className="top-full right-0  mt-3 absolute w-52 h-fit px-3 bg-white flex flex-col">
+                    <ul className="top-full right-0  mt-3 absolute w-52 h-fit px-3 bg-white flex flex-col rounded-xl">
                         <li className="gap-2 py-2 bg-inherit border-b-2 border-tahiti font-400 text-sm/[26px] text-custom-black flex items-center "> <IoMdAdd /> Create New Shipment</li>
                         <li className=" gap-2 py-2 bg-inherit border-b-2 border-tahiti font-400 text-sm/[26px] text-custom-black flex items-center "><FiEdit2 /> Edit Shipment</li>
                         <li className="gap-2 py-2 bg-inherit border-b-2 border-tahiti font-400 text-sm/[26px] text-custom-black flex items-center text-nowrap "><FaClipboardList /> Create New Shipment</li>
@@ -233,31 +233,79 @@ export default function Page({
                             </div>
                         </section>
                     </aside>
-                    <aside className="w-fit px-4 py-3 h-fit bg-custom-white">
-                        <header className="w-full px-1 text-metal flex gap-2">
+                    <aside className="w-fit px-4 py-3  bg-custom-white">
+                        <header className=" relative top-0 w-full px-1 text-metal flex gap-2">
                             <MdFormatListBulleted className="font-500 w-4 h-4"/>
                             <h4 className="font-500 text-sm/[15.32px]">Logistics Steps</h4>
                         </header>
-                        <section className="w-full flex ">
-                            <div className="flex gap-4 items-center">
+                        <section className="w-full flex flex-col items-start px-3 relative gap-7 overflow-auto">
+                            <div className="flex gap-4 items-center z-10 ">
                                 <h4 className="p-1 text-custom-green bg-custom-green-bg rounded-lg text-sm/[15.32px]">01</h4>
                                 <div>
                                     <h3 className="text-base/[26px] text-black font-500 text-nowrap">Logistics Step name</h3>
                                     <p className="text-sm/[15.32px] text-custom-black text-nowrap">Step Sescription</p>
                                 </div>
-                                <button className=" ml-12 flex gap-2 relaive">
+                                <div className=" ml-12 flex gap-2 relaive">
                                     <BsFillCheckCircleFill  className="text-custom-green"/>
-                                    <PiDotsThreeOutlineFill onClick={handleStepOptions} className="relative cursor-pointer"/>
-                                    {
-                                        logisticsStepoptions ? <ul className="">
-                                            <li>Complete Step</li>
-                                            <li>View Updates</li>
-                                            <li>Send an Updates</li>
+                                    <button className="relative" onClick={handleStepOptions}>
+                                        <PiDotsThreeOutlineFill  className="relative cursor-pointer p"/>
+                                        {
+                                        logisticsStepoptions ? <ul className=" absolute top-full bg-white list-none rounded-xl grid p-2 right-0 mt-4">
+                                            <li className="flex gap-2 items-center border-b-2 border-tahiti text-nowrap py-2 font-400 text-sm/[26px] text-custom-green"> <FaRegCheckCircle className="text-sm/[26px]"/> Complete Step</li>
+                                            <li className="flex gap-2 items-center border-b-2 border-tahiti text-nowrap py-2 font-400 text-sm/[26px] text-custom-black"> <FiEye className="text-sm/[26px]"/> View Updates</li>
+                                            <li className="flex gap-2 items-center border-b-2 border-tahiti text-nowrap py-2 font-400 text-sm/[26px] text-custom-black"><CiViewBoard className="inline-block  -rotate-90 text-sm/[26px]"/>Send an Updates</li>
                                         </ul> : null
                                     }
-                                </button>
+                                    </button>
+
+                                </div>
 
                             </div>
+                            <div className="flex gap-4 items-center z-10">
+                                <h4 className="p-1 text-custom-green bg-custom-green-bg rounded-lg text-sm/[15.32px]">01</h4>
+                                <div>
+                                    <h3 className="text-base/[26px] text-black font-500 text-nowrap">Logistics Step name</h3>
+                                    <p className="text-sm/[15.32px] text-custom-black text-nowrap">Step Sescription</p>
+                                </div>
+                                <div className=" ml-12 flex gap-2 relaive">
+                                    <BsFillCheckCircleFill  className="text-custom-green"/>
+                                    <button className="relative" onClick={handleStepOptions}>
+                                        <PiDotsThreeOutlineFill  className="relative cursor-pointer p"/>
+                                        {
+                                        logisticsStepoptions ? <ul className=" absolute top-full bg-white list-none rounded-xl grid p-2 right-0 mt-4">
+                                            <li className="flex gap-2 items-center border-b-2 border-tahiti text-nowrap py-2 font-400 text-sm/[26px] text-custom-green"> <FaRegCheckCircle className="text-sm/[26px]"/> Complete Step</li>
+                                            <li className="flex gap-2 items-center border-b-2 border-tahiti text-nowrap py-2 font-400 text-sm/[26px] text-custom-black"> <FiEye className="text-sm/[26px]"/> View Updates</li>
+                                            <li className="flex gap-2 items-center border-b-2 border-tahiti text-nowrap py-2 font-400 text-sm/[26px] text-custom-black"><CiViewBoard className="inline-block  -rotate-90 text-sm/[26px]"/>Send an Updates</li>
+                                        </ul> : null
+                                    }
+                                    </button>
+
+                                </div>
+
+                            </div>
+                            <div className=" absolute w-0 h-3/5 border top-6  border-dashed border-tahiti ml-3"></div>
+                            <div className="flex gap-4 items-center z-10">
+                                <h4 className="p-1 text-custom-green bg-custom-green-bg rounded-lg text-sm/[15.32px]">01</h4>
+                                <div>
+                                    <h3 className="text-base/[26px] text-black font-500 text-nowrap">Logistics Step name</h3>
+                                    <p className="text-sm/[15.32px] text-custom-black text-nowrap">Step Sescription</p>
+                                </div>
+                                <div className=" ml-12 flex gap-2 relaive">
+                                    <BsFillCheckCircleFill  className="text-custom-green"/>
+                                    <button className="relative" onClick={handleStepOptions}>
+                                        <PiDotsThreeOutlineFill  className="relative cursor-pointer p"/>
+                                        {
+                                        logisticsStepoptions ? <ul className=" absolute top-full bg-white list-none rounded-xl grid p-2 right-0 mt-4">
+                                            <li className="flex gap-2 items-center border-b-2 border-tahiti text-nowrap py-2 font-400 text-sm/[26px] text-custom-green"> <FaRegCheckCircle className="text-sm/[26px]"/> Complete Step</li>
+                                            <li className="flex gap-2 items-center border-b-2 border-tahiti text-nowrap py-2 font-400 text-sm/[26px] text-custom-black"> <FiEye className="text-sm/[26px]"/> View Updates</li>
+                                            <li className="flex gap-2 items-center border-b-2 border-tahiti text-nowrap py-2 font-400 text-sm/[26px] text-custom-black"><CiViewBoard className="inline-block  -rotate-90 text-sm/[26px]"/>Send an Updates</li>
+                                        </ul> : null
+                                    }
+                                    </button>
+
+                                </div>
+
+                            </div>                
                         </section>
                     </aside>
                 </section>
