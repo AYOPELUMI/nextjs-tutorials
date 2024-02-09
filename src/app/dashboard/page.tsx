@@ -44,7 +44,7 @@ export default function Page({ params }: Props) {
 						<h5 className="text-sm font-normal text-black">Commodity</h5>
 						<h5 className="text-sm font-normal text-black">Origin</h5>
 						<h5 className="text-sm font-normal text-black">Destination</h5>
-						<h5 className="text-sm font-normal text-black">Shpment Type/Mode</h5>
+						<h5 className="text-sm font-normal text-black">Shipment Type/Mode</h5>
 						<h5 className="text-sm font-normal text-black">Status</h5>
 					</div>
 					<div className=" w-full grid grid-cols-7 bg-white py-3 px-3 place-items-start items-center gap-2">

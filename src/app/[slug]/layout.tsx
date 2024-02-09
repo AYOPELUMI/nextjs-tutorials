@@ -11,10 +11,8 @@ export const metadata: Metadata = {
 export default function Layout({ children }: LayoutProps) {
     
     return (
-        <html lang="en">
-            <body className='w-screen h-screen bg-custom-white px-8'>
+            <body className='relative w-screen h-screen bg-custom-white px-8'>
                 {children}
             </body>
-        </html>
     );
 }

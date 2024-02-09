@@ -31,7 +31,7 @@ export default function Page({
 
     return (
         <>
-            <header className="fixed w-full flex justify-between bg-inherit py-5">
+            <header className="fixed top-0 right-0 left-0 flex justify-between bg-inherit py-5">
                 <div className="flex gap-2 items-center">
                     <FaArrowLeftLong className="text-custom-text-color w-3 h-4 bg bg-inherit text"/>
                     <h3 className="w-fit text-black text-xl/[24px]">Shipment Details</h3>
