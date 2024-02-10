@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 type LayoutProps = {
     children: ReactNode;
 };
-export const metadata: Metadata = {
+export const metadata = {
     title: "Shipment Details",
     description: "Shipment Details",
   };
