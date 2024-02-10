@@ -17,6 +17,7 @@ const config: Config = {
         transparent: 'transparent',
         current: 'currentColor',
         'white': '#ffffff',
+        'modal-bg' : '#00000080',
         'custom-white': '#F4F6FA',
         'custom-black' : '#6E6E6E',
         'purple': '#3f3cbb',

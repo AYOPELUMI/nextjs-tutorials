@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-
+import {Suspense} from "react";
+import NewShipmentModal from '@/components/NewShipmentModal/NewShipmentModal';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +18,9 @@ export default function Layout({
 	return (
 		<html lang="en">
 			<body className='bg-cutom-white px-6 py-4'>{children}</body>
+			<Suspense fallback={<>Loading ...</>}>
+				<NewShipmentModal />
+			</Suspense>
 		</html>
 	)
 }

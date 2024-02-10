@@ -1,5 +1,6 @@
 'use client'
 import { FaPlus } from "react-icons/fa6";
+import Link from 'next/link'
 interface Props {
 	params: {
 		id: string;
@@ -20,10 +21,10 @@ export default function Page({ params }: Props) {
 						All your shipment bookings
 					</p>
 				</div>
-				<button className=" flex  items-center gap-2 row-span-2 rounded-3xl justify-self-end bg-custom-green text-white w-40 font-700 text-xs px-2">
-				<FaPlus className="text-lg font-600"/>
-					CREATE SHIPMENT
-				</button>
+				<Link className=" flex  items-center gap-2 row-span-2 rounded-3xl justify-self-end bg-custom-green text-white w-40 font-700 text-xs px-2" href="?newShipmentModal=true">
+					<FaPlus className="text-lg font-600"/>
+						CREATE SHIPMENT
+				</Link>
 			</header>
 			<section className="w-full h-full px-3">
 				<div className="w-full py-5 px-3 bg-white flex justify-between">
