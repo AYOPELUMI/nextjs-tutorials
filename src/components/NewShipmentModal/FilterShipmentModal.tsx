@@ -35,24 +35,21 @@ export default function FilterShipmentModal() {
 						labelClass="flex flex-col w-full gap-2"
 						type="text"
 						placeHolder="Please enter"
-						inputClass=" rounded-md border focus:border-tahiti hover: border-tahiti "
-						/>
+					/>
 					<Input 
 						span="Commodity"
 						spanClass="font-500 text-sm/[26px] text-black"
 						labelClass="flex flex-col w-full gap-2"
 						type="text"
 						placeHolder="Please enter"
-						inputClass=" rounded-md border focus:border-tahiti hover: border-tahiti "
-						/>
+					/>
 					<Input 
 						span="BL Number"
 						spanClass="font-500 text-sm/[26px] text-black"
 						labelClass="flex flex-col w-full gap-2"
 						type="text"
 						placeHolder="Please enter"
-						inputClass=" rounded-md border focus:border-tahiti hover: border-tahiti "
-						/>
+					/>
 					<label  className="flex gap-4 flex-wrap">
 						<span className="font-500 text-sm/[26px] text-black w-full">Shipment Type</span>
 						<br />
@@ -72,7 +69,7 @@ export default function FilterShipmentModal() {
 
 						/>
 					</label>
-					<label for="shipment Mode" className="flex gap-4 flex-wrap">
+					<label className="flex gap-4 flex-wrap">
 						<span className="font-500 text-sm/[26px] text-black w-full">Shipment Mode</span>
 						<br />
 						<CheckBox 
@@ -112,7 +109,6 @@ export default function FilterShipmentModal() {
 						labelClass="flex flex-col w-full gap-2"
 						type="text"
 						placeHolder="Please enter"
-						inputClass=" rounded-md border focus:border-tahiti hover: border-tahiti "
 					/>
 					<Input 
 						span="Shipment Status"
@@ -120,9 +116,8 @@ export default function FilterShipmentModal() {
 						labelClass="flex flex-col w-full gap-2"
 						type="text"
 						placeHolder="Please enter"
-						inputClass=" rounded-md border focus:border-tahiti hover: border-tahiti "
 					/>
-					<label for="shipment Status" className="flex gap-4 flex-wrap">
+					<label className="flex gap-4 flex-wrap">
 						<span className="font-500 text-sm/[26px] text-black w-full">Shipment Status</span>
 						<br />
 						<CheckBox 
