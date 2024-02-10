@@ -21,10 +21,10 @@ export default function Page({ params }: Props) {
 						All your shipment bookings
 					</p>
 				</div>
-				<Link className=" flex  items-center gap-2 row-span-2 rounded-3xl justify-self-end bg-custom-green text-white w-40 font-700 text-xs px-2" href="?newShipmentModal=true">
+				<button className=" flex  items-center gap-2 row-span-2 rounded-3xl justify-self-end bg-custom-green text-white w-40 font-700 text-xs px-2">
 					<FaPlus className="text-lg font-600"/>
 						CREATE SHIPMENT
-				</Link>
+				</button>
 			</header>
 			<section className="w-full h-full px-3">
 				<div className="w-full py-5 px-3 bg-white flex justify-between">
@@ -34,9 +34,9 @@ export default function Page({ params }: Props) {
 							<li>Completed</li>
 							<li>Archived</li>
 						</ul>
-					<button className="rounded-3xl bg-custom-white text-custom-text-color w-32 py-1 text-xs px-1">
+					<Link  href="?filterShipmentModal=true"className="rounded-3xl bg-custom-white text-custom-text-color w-32 py-1 text-xs px-1">
 						filter button
-					</button>
+					</Link>
 				</div>
 				<div className='grid w-full px-6'>
 					<div className=" w-full grid grid-cols-7 bg-custom-white py-4 px-3 place-items-start items-center">
