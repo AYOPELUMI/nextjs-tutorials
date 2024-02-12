@@ -1,6 +1,7 @@
 
 'use client'
 import { FaArrowLeftLong } from "react-icons/fa6";
+import Link from "next/link"
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { useState } from "react";
 import { IoMdAdd } from "react-icons/io";
@@ -119,10 +120,10 @@ export default function Page({
                                         <h4 className="text-sm[26px] font-400 text-nowrap">Commodity Info</h4>
                                     </div>
                                     <hr className="w-3/5 h-px bg-custom-white"/>
-                                    <div className="flex items-center gap-1 text-custom-green w-fit">
+                                    <Link href='?editCommodityInfoModal==true' className=" cursor-pointer flex items-center gap-1 text-custom-green w-fit">
                                         <FiEdit2 />
                                         <h4 className="text-sm[26px] font-400 text-nowrap">Edit Info</h4>
-                                    </div>
+                                    </Link>
                                 </div>
                                 <div className="grid font-400">
                                     <p className="text-custom-black text-sm/[26px]">Commodity/Package Name</p>
@@ -152,17 +153,17 @@ export default function Page({
                                         <h4 className="text-sm[26px] font-400 text-nowrap">Shipping Info</h4>
                                     </div>
                                     <hr className="w-3/5 h-px bg-custom-white"/>
-                                    <button className="flex items-center gap-1 text-custom-green w-fit">
+                                    <Link  href="?editShippingInfoModal=true" className="cursor-pointer flex items-center gap-1 text-custom-green w-fit">
                                         <FiEdit2 />
                                         <h4 className="text-sm[26px] font-400 text-nowrap">Edit Info</h4>
-                                    </button>
+                                    </Link>
                                 </div>
                                 <div className="grid font-400">
                                     <p className="text-custom-black text-sm/[26px]">BL Number</p>
                                     <h4 className="text-black text-base/[26px]">0001-A0M6-M028</h4>
                                 </div>
                                 <div className="grid gap-1 font-400">
-                                    <p className="text-custom-black text-sm/[26px]">PContainer Number</p>
+                                    <p className="text-custom-black text-sm/[26px]">Container Number</p>
                                     <h4 className="text-black text-base/[26px]">0001-A0M6-0002</h4> 
                                 </div>
                                 <div className="grid gap-1 font-400">
@@ -209,7 +210,7 @@ export default function Page({
                                         <h4 className="text-sm[26px] font-400 text-nowrap">Service Info</h4>
                                     </div>
                                     <hr className="w-3/5 h-px bg-custom-white"/>
-                                    <button className="flex items-center gap-1 text-custom-green w-fit">
+                                    <button className=" cursor-pointer flex items-center gap-1 text-custom-green w-fit">
                                         <FiEdit2 />
                                         <h4 className="text-sm[26px] font-400 text-nowrap">Edit Info</h4>
                                     </button>
