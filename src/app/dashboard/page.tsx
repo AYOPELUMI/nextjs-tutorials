@@ -21,7 +21,7 @@ export default function Page({ params }: Props) {
 						All your shipment bookings
 					</p>
 				</div>
-				<button className=" flex  items-center gap-2 row-span-2 rounded-3xl justify-self-end bg-custom-green text-white w-40 font-700 text-xs px-2">
+				<button className=" flex  items-center gap-2 row-span-2 rounded-3xl justify-self-end bg-custom-green text-white w-40 font-700 text-xs px-2 text-nowrap">
 					<FaPlus className="text-lg font-600"/>
 						CREATE SHIPMENT
 				</button>
@@ -64,5 +64,5 @@ export default function Page({ params }: Props) {
 				</div>
 			</section>
 		</>
-	);
+	)
 }

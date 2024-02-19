@@ -20,7 +20,7 @@ export default function EditCommodityInfo() {
 		{
 			modal && 
 				<div className="absolute left-0 top-0 right-0 bottom-0 w-screen h-screen bg-modal-bg z-50 overflow-auto backdrop-blur ">
-				<div className="w-2/5 h-screen right-0 absolute bg-white px-5 py-4 overflow-auto">
+				<div className="w-[37rem] h-screen right-0 absolute bg-white px-5 py-4 overflow-auto">
 				<header className="w-full py-3 flex justify-between bg-inherit border-b-2 border-tahiti">
 					<h3 className="font-500 text-base/[26px]">
 						Edit Commodity Info
