@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { IoCloseSharp } from "react-icons/io5";
 import { Input } from "../Input/page";
+import axios from 'axios'
+import data from '../lib/data.json'
 
 interface Props {
 	params: {
@@ -16,28 +18,14 @@ export default function ShippingInfo() {
 	const searchParams = useSearchParams();
     const modal = searchParams.get("editShippingInfoModal");
     const pathname = usePathname();
-	const [shippingInfo, setShippingInfo] =useState<object>({})
+	const [shippingInfo, setShippingInfo] =useState<object>(data.user[0])
 
-	function fetchJSONData() {
-		fetch("../_lib/data.json")
-			.then((res) => {
-				if (!res.ok) {
-					throw new Error
-						(`HTTP error! Status: ${res.status}`);
-				}
-				return res.json();
-			})
-			.then((data) => 
-				  console.log(data))
-			.catch((error) => 
-				   console.error("Unable to fetch data:", error));
-	}
+	console.log({shippingInfo})
 
-	useEffect(() => {
-		fetchJSONData()
-	}, [])
+	console.log({data})
 
-	function handleShippingInfo  (name,value={}) {
+
+	function handleShippingInfo  (name,value) {
 		console.log("name :" +name,"value :" +value)
 		setShippingInfo({
 			...shippingInfo,
@@ -65,11 +53,11 @@ export default function ShippingInfo() {
 		<>
 		{
 			modal && 
-			<div className="absolute w-full h-full top-0 bg-modal-bg z-50 overflow-auto backdrop-blur ">
+			<div className="absolute left-0 right-0 bottom-0 top-0 bg-modal-bg z-50 overflow-auto backdrop-blur ">
 				<div className="w-[37rem] h-screen right-0 absolute bg-white px-5 py-4 overflow-auto">
 				<header className="w-full py-3 flex justify-between bg-inherit border-b-2 border-tahiti">
 					<h3 className="font-500 text-base/[26px]">
-						Filter Shipments
+						Edit Shipping Info
 					</h3>
 					<Link href={pathname}>
 						<IoCloseSharp className='w-6 h-6 text-custom-text-color' />
@@ -81,6 +69,7 @@ export default function ShippingInfo() {
 						spanClass="font-500 text-sm/[26px] text-black"
 						labelClass="flex flex-col w-full gap-2 h-fit"
 						type="text"
+						value={shippingInfo.BL_Number}
 						placeHolder="Please enter"
 						onChange={handleBlChange}
 					/>
@@ -89,6 +78,7 @@ export default function ShippingInfo() {
 						spanClass="font-500 text-sm/[26px] text-black"
 						labelClass="flex flex-col w-full gap-2 h-fit"
 						type="text"
+						value={shippingInfo.Container_Number}
 						placeHolder="Please enter"
 						onChange={handleContainerChange}
 					/>
@@ -97,6 +87,7 @@ export default function ShippingInfo() {
 						spanClass="font-500 text-sm/[26px] text-black"
 						labelClass="flex flex-col w-full gap-2 h-fit"
 						type="text"
+						value={shippingInfo.Shipping_Line}
 						placeHolder="Please enter"
 						onChange={handleShippingLineChange}
 					/>
@@ -105,6 +96,7 @@ export default function ShippingInfo() {
 						spanClass="font-500 text-sm/[26px] text-black"
 						labelClass="flex flex-col w-full gap-2 h-fit"
 						type="text"
+						value={shippingInfo.Vessel_Name}
 						placeHolder="Please enter"
 						onChange={handleVesselNameChange}
 					/>

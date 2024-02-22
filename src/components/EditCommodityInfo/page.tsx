@@ -3,6 +3,8 @@ import {useSearchParams, usePathname} from "next/navigation";
 import Link from "next/link";
 import { IoCloseSharp } from "react-icons/io5";
 import { Input } from "../Input/page";
+import SelectOptions from '../SelectOptions/page';
+
 
 interface Props {
 	params: {
@@ -30,7 +32,7 @@ export default function EditCommodityInfo() {
 					</Link>
 				</header>
 				<form className="grid gap-5 pt-9 w-full">
-				<Input 
+					<Input 
 						span="Commodity/Package Name"
 						spanClass="font-500 text-sm/[26px] text-black"
 						labelClass="flex flex-col w-full gap-2"
@@ -44,6 +46,14 @@ export default function EditCommodityInfo() {
 						type="text"
 						placeHolder="Please enter"
 					/>	
+					<Input 
+						span="Package Quantity"
+						spanClass="font-500 text-sm/[26px] text-black"
+						labelClass="flex flex-col w-full gap-2"
+						type="text"
+						placeHolder="Please enter"
+					/>
+					<SelectOptions />
 					<button className=" mt-5 w-80 py-3 place-self-center bg-custom-green text-white text-center text-sm/[18.2px] font-700 rounded-full outline-none border-none">Save & Continue</button>
 				</form>
 			</div>
